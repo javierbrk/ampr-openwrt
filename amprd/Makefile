@@ -17,6 +17,7 @@ define Package/$(PKG_NAME)
 	SUBMENU:=Routing and Redirection
 	TITLE:=IPIP encapsulation daemon for the AMPR network
 	MAINTAINER:=Bill Hill <bugs@wbh.org>
+	DEPENDS:=+kmod-ipip +ip-full
 endef
 
 define Package/$(PKG_NAME)/description

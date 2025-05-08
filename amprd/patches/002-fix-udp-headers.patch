@@ -1,0 +1,19 @@
+--- a/ampr-ripd.c
++++ b/ampr-ripd.c
+@@ -14,7 +14,7 @@
+ #include <netdb.h>
+ #include <netinet/in.h>
+ #include <netinet/ip.h>
+-#include <netinet/udp.h>
++#include <linux/udp.h>
+ #include <net/if.h>
+ #include <arpa/inet.h>
+ #include <time.h>
+@@ -23,6 +23,10 @@
+ #ifndef IPPORT_ROUTESERVER
+ #define IPPORT_ROUTESERVER 520
+ #endif
++
++#ifndef IPPORT_ROUTESERVER
++#define IPPORT_ROUTESERVER 520
++#endif
