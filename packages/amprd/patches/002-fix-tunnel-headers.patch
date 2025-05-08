@@ -1,0 +1,14 @@
+--- a/tunnel.c	2025-05-08 13:45:20.458198379 -0300
++++ b/tunnel.c	2025-05-08 13:48:05.377443815 -0300
+@@ -48,6 +48,11 @@
+ 
+ #include "callhome.h"
+ 
++#ifndef IPPORT_ROUTESERVER
++#define IPPORT_ROUTESERVER 520
++#endif
++
++
+ /*! Assert*/
+ #define assert(x, f) \
+ if  (x == NULL) \

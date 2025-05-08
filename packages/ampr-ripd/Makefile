@@ -16,6 +16,7 @@ define Package/$(PKG_NAME)
 	CATEGORY:=Network
 	SUBMENU:=Routing and Redirection
 	TITLE:=Routing daemon for the AMPR network
+	DEPENDS:=+kmod-ipip +ip-full
 	MAINTAINER:=Bill Hill <bugs@wbh.org>
 endef
 

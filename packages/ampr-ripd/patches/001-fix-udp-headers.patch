@@ -1,0 +1,15 @@
+--- a/ampr-ripd.c	2024-05-08 12:00:00.000000000 +0200
++++ b/ampr-ripd.c	2024-05-08 12:00:00.000000000 +0200
+@@ -14,7 +14,12 @@
+ #include <netdb.h>
+ #include <netinet/in.h>
+ #include <netinet/ip.h>
+-#include <netinet/udp.h>
++#include <linux/udp.h>
++
++#ifndef IPPORT_ROUTESERVER
++#define IPPORT_ROUTESERVER 520
++#endif
++
+ #include <net/if.h>
+ #include <arpa/inet.h>

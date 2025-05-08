@@ -1,0 +1,11 @@
+--- a/Makefile	2025-05-08 14:02:07.384902302 -0300
++++ b/Makefile	2025-05-08 14:01:03.144028260 -0300
+@@ -9,7 +9,7 @@
+ CC = gcc
+ CFLAGS = -Wall -O2 
+ LD = gcc
+-LDFLAGS =
++LDFLAGS = -lc
+ 
+ OBJFILES = amprd.o tunnel.o minIni.o list.o rip.o encap.o cache.o route.o callhome.o
+ 

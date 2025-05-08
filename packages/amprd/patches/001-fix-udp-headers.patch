@@ -1,15 +1,23 @@
---- a/ampr-ripd.c	2024-05-08 12:00:00.000000000 +0200
-+++ b/ampr-ripd.c	2024-05-08 12:00:00.000000000 +0200
-@@ -14,7 +14,12 @@
- #include <netdb.h>
+--- a/amprd.c	2025-05-08 13:32:32.854731778 -0300
++++ b/amprd.c	2025-05-08 13:33:27.531478763 -0300
+@@ -65,7 +65,7 @@
+ #include <sys/socket.h>
  #include <netinet/in.h>
  #include <netinet/ip.h>
 -#include <netinet/udp.h>
 +#include <linux/udp.h>
-+
+ #include <linux/if_ether.h>
+ #include <sys/ioctl.h>
+ #include <arpa/inet.h>
+@@ -84,6 +84,11 @@
+ #include "callhome.h"
+ #include "commons.h"
+ 
 +#ifndef IPPORT_ROUTESERVER
 +#define IPPORT_ROUTESERVER 520
 +#endif
 +
- #include <net/if.h>
- #include <arpa/inet.h>
++
+ #define MAXPAYLOAD 		(2048)
+ 
+ char *passwd = NULL;
